@@ -11,7 +11,7 @@ const cors = require('cors')
 
 const app = express();
 let port = process.env.PORT || 5000
-app.use(cors({origin: 'http://localhost:3000/'}))
+app.use(cors({origin: '*'}))
 app.use(express.json())
 
 let smtp_login = process.env.SMTP_LOGIN ||  "----"
